@@ -17,9 +17,12 @@ a:focus {
 ul {
   list-style: none;
 }
-h1, h2, h3, h4, h5, button, a {
+h1, h3, h4, h5, button, a, input {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
+}
+h2 {
+  font-weight: 200;
 }
 
 
@@ -342,7 +345,67 @@ h1, h2, h3, h4, h5, button, a {
   background: transparent;
   font-size: 13px;
   padding: 10px 30px;
+  border-radius: 3px;
 }
+
+/* Section 6 */
+#section_6 {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  height: 80vh;
+  background-image: url(../imgs/make-an-appointment.jpg);
+  background-size: 100% 140%;
+  background-position: center;
+  color: white;
+}
+.s6_form {
+  margin: 0 auto;
+  padding: 10px;
+  width: 40%;
+}
+.s6_form form * {
+  margin: 1.5vh 0 ;
+  padding: 10px;
+}
+.s6_form form {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+}
+.s6_form input {
+  color: white;
+  font-size: 10px;
+  border: 1px solid white;
+  background: transparent;
+  width: 48%
+}
+form input::placeholder,
+.s6_form textarea::placeholder {
+  color: lightgrey;
+}
+.s6_form textarea {
+  border: 1px solid white;
+  font-size: 10px;
+  background: transparent;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  width: 100%;
+}
+
+
+.s6_form #submit {
+  border-radius: 2px;
+  font-weight: 400;
+  font-size: 15px;
+  border: none;
+  background: #39afbb;
+  color: white;
+  margin: 0;
+  width: 100%;
+}
+
+
 
 
 
