@@ -138,6 +138,35 @@ h2 {
 }
 .sub_container {
   width: 70%;
+  margin: 0 auto;
+}
+.social_square {
+  margin-right: 3px;
+  display: inline-block;
+  border-radius: 2px;
+  width: 22px;
+  height: 22px;
+  position: relative;
+}
+.social_square.fb {
+  background: #3C5998;
+}
+.social_square.tw {
+  background: #54ACEE;
+}
+.social_square.in {
+  background: #3F729B;
+}
+.social_square.yt {
+  background: red;
+}
+.social_square i {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  font-size: 11px;
+  color: white;
 }
 
 /* Section 1 */
@@ -219,32 +248,6 @@ h2 {
   color: #7c858f;
   line-height: 4vh;
 }
-.social_square {
-  margin-right: 3px;
-  display: inline-block;
-  border-radius: 2px;
-  width: 22px;
-  height: 22px;
-  text-align: center;
-  position: relative;
-}
-.social_square.fb {
-  background: #3C5998;
-}
-.social_square.tw {
-  background: #54ACEE;
-}
-.social_square.in {
-  background: #3F729B;
-}
-.social_square i {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  font-size: 11px;
-  color: white;
-}
 
 /* Section 3 */
 #s3_cont {
@@ -271,7 +274,6 @@ h2 {
   width: fit-content;
   height: 60px;
   width: 60px;
-  border: 1px solid lightgrey;
   border-radius: 50%;
 }
 .services_template h4 {
@@ -376,7 +378,7 @@ h2 {
 .s6_form input {
   color: white;
   font-size: 10px;
-  border: 1px solid white;
+  border: 1px solid lightgrey;
   background: transparent;
   width: 48%
 }
@@ -385,15 +387,14 @@ form input::placeholder,
   color: lightgrey;
 }
 .s6_form textarea {
-  border: 1px solid white;
+  color: white;
+  border: 1px solid lightgrey;
   font-size: 10px;
   background: transparent;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   width: 100%;
 }
-
-
 .s6_form #submit {
   border-radius: 2px;
   font-weight: 400;
@@ -403,6 +404,159 @@ form input::placeholder,
   color: white;
   margin: 0;
   width: 100%;
+}
+
+/* Section 7 */
+#section_7 {
+  width: 100%;
+  height: 30vh;
+  background-image: url(../imgs/rgb-gradient-bar-for-logo-carrasel.jpg);
+  background-size: cover;
+}
+.sub_container.s7 {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100%;
+  overflow-x: auto;
+}
+.slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-shrink: 0;
+  width: calc(100% / 4);
+}
+.slide img {
+  width: 80%;
+}
+.sub_container.s7::-webkit-scrollbar {
+  display: none;
+}
+
+/* Footer */
+.foot_head {
+  padding: 50px 40px;
+  display: flex;
+}
+.left_foot {
+  display: flex;
+  width: 65%;
+  height: 100%;
+}
+.right_foot {
+  width: 35%;
+  height: 100%;
+}
+#avada_health {
+  width: 50%;
+}
+#avada_health img {
+  width: 45%;
+}
+#avada_health p {
+  font-size: 12px;
+  line-height: 3vh;
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 10px;
+  margin: 7px 0px;
+}
+#avada_health h5 {
+  font-size: 12px;
+  margin-bottom: 25px;
+}
+#contact_infos {
+  padding: 0px 50px;
+}
+.foot_head h4 {
+  font-size: 14px;
+  font-weight: 400;
+}
+.foot_head h4::after {
+  margin-top: 20px;
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1.5px;
+  background: #39afbb;
+  margin-bottom: 15px;
+}
+.foot_head ul li,
+.foot_head ul li a {
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 3vh;
+  font-size: 13px;
+  color: black;
+}
+.foot_head ul li span {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+}
+.right_foot ul li span {
+  vertical-align: middle;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  background: #39afbb;
+}
+.foot_head ul li i {
+  font-size: 11px;
+}
+.left_foot ul li i {
+  color: #39afbb;
+}
+.right_foot ul li i {
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  color: white;
+  position: absolute;
+}
+.right_foot ul {
+  margin-bottom: 40px;
+}
+.right_foot button {
+  font-weight: 400;
+  border: 1px solid black;
+  background: transparent;
+  color: black;
+  padding: 10px 25px;
+}
+
+.foot_bottom {
+  background: #f1efef;
+  padding : 20px 50px
+}
+.foot_bottom ul {
+  display: flex;
+}
+.foot_bottom ul li {
+  color: grey;
+  font-size: 10px;
+  margin-right: 10px;
+}
+.foot_bottom ul li span {
+  color: black;
+}
+#fixed_menu {
+  border-radius: 2px;
+  width: 35px;
+  height: 25px;
+  position: fixed;
+  bottom: 0px;
+  right: 4%;
+  background: #41474f;
+  color: white;
+}
+#fixed_menu i {
+  font-size: 10px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
 }
 
 
