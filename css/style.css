@@ -17,6 +17,11 @@ a:focus {
 ul {
   list-style: none;
 }
+h1, h2, h3, h4, h5, button, a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
 
 /* HEADER */
 .whole_head {
@@ -54,13 +59,11 @@ ul {
 .head_nav ul li a{
   color: white;
   font-size: 10px;
-  font-family: 'Montserrat', sans-serif;
 }
 .head_nav ul li #home {
   color: #3ba5bd;
 }
 .head_nav button {
-  font-family: 'Montserrat', sans-serif;
   color: white;
   font-size: 10px;
   margin: 0px 10px;
@@ -82,7 +85,6 @@ ul {
   color: white;
 }
 .head_intro h1 {
-  font-weight: 300;
   font-size: 60px;
   margin: -10px 0px;
 }
@@ -95,7 +97,6 @@ ul {
 .head_intro button {
   border-radius: 2px;
   font-size: 12px;
-  font-family: 'Montserrat', sans-serif;
   width: fit-content;
   background: #39afbb;
   color: white;
@@ -121,7 +122,6 @@ ul {
 .intro_text  h2 {
   margin: 0 auto;
   width: fit-content;
-  font-weight: 200;
   font-size: 30px;
 }
 .intro_text hr {
@@ -170,7 +170,6 @@ ul {
 }
 .organization_template h4 {
   margin-bottom: 1.5vh;
-  font-weight: 300;
   font-size: 17px;
 }
 .organization_template p {
@@ -210,7 +209,6 @@ ul {
   margin: 1.5vh 0;
 }
 .doc_profile h5 {
-  font-weight: 300;
   font-size: 16px;
 }
 .doc_profile p {
@@ -275,7 +273,6 @@ ul {
 }
 .services_template h4 {
   margin-bottom: 1vh;
-  font-weight: 300;
   font-size: 17px;
 }
 .services_template p {
@@ -298,9 +295,53 @@ ul {
   padding: 10vh 0;
   color: white;
 }
-
 #s4_cont .intro #play {
   margin-top: 3.5vh;
+  width: 45px;
+}
+
+/* Section 5 */
+#section_5 {
+  display: flex;
+  width: 100%;
+}
+.health_sheet {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 30vh;
+  width: calc(100% / 3);
+  color: white;
+  padding: 5vh 2vh;
+}
+#cian {
+  background: #3AAFBF;
+}
+#dark_cian {
+  background: #3597C3;
+}
+#darker_cian {
+  background: #327EC7;
+}
+.health_sheet h4 {
+  font-size: 15px;
+  font-weight: 400;
+}
+.health_sheet img {
+  width: 50px;
+}
+.health_sheet p {
+  text-align: center;
+  font-size: 12px;
+  line-height: 3.5vh;
+}
+.health_sheet button {
+  color: white;
+  border: 2px solid white;
+  background: transparent;
+  font-size: 13px;
+  padding: 10px 30px;
 }
 
 
