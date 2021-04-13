@@ -18,29 +18,25 @@
     <div id='root'>
       <!-- HEADER -->
       <header>
-        <div class="whole_head">
+        <div class="whole_head" :style="{background : 'url(' + myImagesPath + images.jumbotron + ')'}">
           <!-- Logo & Navigation menu -->
-          <div class="nav_menu">
+          <div class="nav_menu flex_row">
             <div class="head_logo">
-              <img src="imgs/medical_logo_1x_light.png" alt="">
-
+              <img :src="'imgs/' + images.header" alt="Logo">
             </div>
-            <div class="head_nav">
-              <ul id='nav_list'>
-                <li><a id='home' href="">HOME</a></li>
-                <li><a href="">ABOUT</a></li>
-                <li><a href="">DEPARTMENTS</a></li>
-                <li><a href="">ARTICLES</a></li>
+            <div class="head_nav flex_row">
+              <ul class='flex_row'>
+                <li v-for='(element, index) in nav_list.head'><a>{{ element.toUpperCase() }}</a></li>
               </ul>
-              <button>MAKE APPOINTMENT</button>
+              <button :style='button_styles.marine'>{{ button_tags.appointment }}</button>
             </div>
 
           </div>
           <!-- Head Title -->
-          <div class="head_intro">
+          <div  class="head_intro flex_column">
             <h1>Caring <span>For Life</span></h1>
             <p>Kind words can be short and easy to speak, but their echoes are truly endless. Avada Health focuses on you as if it is our own family.</p>
-            <button>LEARN MORE</button>
+            <button >{{ button_tags.learn }}</button>
           </div>          
         </div>
 
@@ -49,7 +45,7 @@
       <main>
         <!-- Section 1 -->
         <section id='section_1'>
-          <div id="s1_cont">
+          <div id="s1_cont" class='flex_column'>
             <div class='intro'>
               <div class="intro_text">
                 <h2>Welcome to Avada Health</h2>
@@ -58,7 +54,7 @@
               
 
             </div>
-            <div class='sub_container' id="organization">
+            <div class='sub_container flex_row' id="organization">
 
               <div class="organization_template">
                 <img src="imgs/icon-1.png" alt="">
