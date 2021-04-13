@@ -16,9 +16,12 @@ const app = new Vue({
 
         nav_lists: {
             head : ['home', 'about', 'departments', 'articles'],
+
             footer : {
                 infos : ['121 King Street, London United Kingdom','1.800.458.556'],
+                
                 departments : ['Cardiology', 'Pediatrics', 'Diabetes Care', 'Pre-natel Care','Ultrasound Echocardiogram'],
+
                 rights : ['© Copyright 2012-2020', 'Avada theme by', 'All Rights Reserved' ,'Powered by ']
             }
         },        
@@ -41,20 +44,12 @@ const app = new Vue({
             departments : 'VIEW OUR DEPARTMENTS'
         },
         
-        font_awsome : ['fas fa-map-marker-alt', 'fas fa-phone', 'fas fa-angle-right'],
+        font_awsome : ['fas fa-map-marker-alt', 'fas fa-phone', 'fas fa-angle-right','fas fa-chevron-up'],
 
         socials : {
             classes : ['fb', 'tw', 'in', 'yt'],
             icons : ['fab fa-facebook-f', 'fab fa-twitter', 'fab fa-instagram', 'fab fa-youtube']
-        }
-
-
-
-        
-
-
-
-        
+        }        
     }
 })
 

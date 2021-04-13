@@ -368,7 +368,7 @@
           <div class="right_foot">
             <h4>MEDICAL DEPARTMENTS</h4>
             <ul>
-              <li v-for='(item, index) in nav_lists.footer.departments'><span><i :class='font_awsome[2]'></i></span> {{ item }}</li>
+              <li v-for='(item, index) in nav_lists.footer.departments'><span><i :class='font_awsome[2]'></i></span> <a href=""> {{ item }} </a></li>
             </ul>
             <button :style='button_styles.empty'>{{ button_tags.departments }}</button>
 
@@ -382,9 +382,8 @@
         </div>
 
         <div id='fixed_menu'>
-          <i class="fas fa-chevron-up"></i>
+          <i :class='font_awsome[3]'></i>
         </div>
-
       </footer>
 
       
