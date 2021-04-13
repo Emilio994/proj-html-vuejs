@@ -11,6 +11,9 @@ body {
 a {
   text-decoration: none;
 }
+a:hover {
+  cursor: pointer;
+}
 a:focus {
   color: none;
 }
@@ -24,6 +27,13 @@ h1, h3, h4, h5, button, a, input {
 h2 {
   font-weight: 200;
 }
+button:hover,
+input[type='submit']:hover,
+i {
+  cursor: pointer;
+}
+
+
 
 /* Utilities */
 .flex_row {
