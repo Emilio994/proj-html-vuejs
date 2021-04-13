@@ -87,7 +87,7 @@
 
         <!-- Section 2 -->
         <section id='section_2'>
-          <div id="s2_cont">
+          <div id="s2_cont" class='flex_column'>
 
             <div class="intro doctors">
               <img src="imgs/icon-5.png" alt="">
@@ -98,7 +98,7 @@
               </div>            
             </div>
 
-            <div class='sub_container' id="doctors_profiles">
+            <div class='sub_container flex_row' id="doctors_profiles">
 
               <div class="doc_profile">
                 <img src="imgs/doctor-1.jpg" alt="Doctor">
@@ -184,7 +184,7 @@
 
         <!-- Section 3 -->
         <section id='section_3'>
-          <div id="s3_cont">
+          <div id="s3_cont" class='flex_column'>
 
             <div class="intro ">
               <img src="imgs/icon-6.png" alt="">
@@ -195,7 +195,7 @@
               </div>            
             </div>
 
-            <div class='sub_container' id="health_services">
+            <div class='sub_container flex_row' id="health_services">
               <div class="services_template">
                 <div class="logo_round">
                   <img src="imgs/icon-14.png" alt="">
@@ -251,7 +251,7 @@
 
         <!-- Section 4 -->
         <section id='section_4'>
-          <div id="s4_cont">
+          <div id="s4_cont" class='flex_row'>
             <div class="intro">
               <img src="imgs/icon-7.png" alt="">
               <div class="intro_text">
@@ -267,8 +267,8 @@
         </section>
 
         <!-- Section 5 -->
-        <section id='section_5'>
-          <div class="health_sheet" id='cian'>
+        <section id='section_5' class='flex_row'>
+          <div class="health_sheet flex_column" id='cian'>
             <h4>Emergency Care</h4>
             <img src="imgs/wave-divider.png" alt="">
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusatiium doloremque<br> laudantium, totam rem aperiam, eaque</p>
@@ -292,7 +292,7 @@
         </section>
 
         <!-- Section 6 -->
-        <section id='section_6'>
+        <section id='section_6' class='flex_column'>
           <div id="s6_cont">
 
             <div class="intro ">
@@ -342,8 +342,8 @@
       </main>
       <!-- FOOTER -->
       <footer>
-        <div class="foot_head">
-          <div class="left_foot">
+        <div class="foot_head flex_row">
+          <div class="left_foot flex_row">
             <div id="avada_health">
               <img :src="myImagesPath + images.footer" alt="">
               <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusatiium dolemue<br> lauti totam aperiam, eaque ipsa quae abillo. Invente veritatis et quasi architecto beatae<br> luptatem accusatium, remaperiamsiat. Voluptatem accusest etsium doloremque<br> laudaien. Lorem ipsum sits dolores ets unser</p>
@@ -359,7 +359,7 @@
             <div id="contact_infos">
               <h4>CONTACT INFORMATION</h4>
               <ul>
-                <li v-for='(item, index) in nav_lists.footer.infos'><span><i :class='font_awsome[index]'></i></span> {{ item }}</li>
+                <li v-for='(item, index) in myArrays.footerInfos'><span><i :class='myArrays.footerInfosIcons[index]'></i></span> {{ item }}</li>
               </ul>
             </div>
 
@@ -368,7 +368,7 @@
           <div class="right_foot">
             <h4>MEDICAL DEPARTMENTS</h4>
             <ul>
-              <li v-for='(item, index) in nav_lists.footer.departments'><span><i :class='font_awsome[2]'></i></span> <a href=""> {{ item }} </a></li>
+              <li v-for='(item, index) in nav_lists.footer.departments'><span><i :class='font_awsome.right_arrow'></i></span><a href=""> {{ item }} </a></li>
             </ul>
             <button :style='button_styles.empty'>{{ button_tags.departments }}</button>
 
@@ -376,13 +376,13 @@
         </div>
 
         <div class="foot_bottom">
-          <ul>
-            <li v-for='(item, index) in nav_lists.footer.rights'> {{ item }} </li>
+          <ul class='flex_row'>
+            <li :id='(index == nav_lists.footer.credits.length - 1) ? "last" : null' v-for='(item, index) in nav_lists.footer.credits'> {{ item }} <span style="color: black;">{{ (index == 1) ? 'Theme Fusion' : null}}</span></li>
           </ul>
         </div>
 
         <div id='fixed_menu'>
-          <i :class='font_awsome[3]'></i>
+          <i :class='font_awsome.upward_arrow'></i>
         </div>
       </footer>
 

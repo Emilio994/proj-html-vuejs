@@ -228,14 +228,11 @@ i {
 #s2_cont {
   padding: 8vh 0;
   width: 100%;
-  display: flex;
-  flex-flow: column;
   justify-content: space-around;
   align-items: center;
 }
 #doctors_profiles {
   margin-top: 5vh;
-  display: flex;
   justify-content: space-around;
 }
 .doc_profile {
@@ -265,13 +262,11 @@ i {
 #s3_cont {
   padding: 8vh 0;
   width: 100%;
-  display: flex;
-  flex-flow: column nowrap;
+  flex-wrap: nowrap;
   justify-content: space-around;
   align-items: center;
 }
 #health_services {
-  display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   
@@ -307,7 +302,6 @@ i {
   background-position: center;
 }
 #s4_cont {
-  display: flex;
   align-items: center;
   padding: 10vh 0;
   color: white;
@@ -318,10 +312,6 @@ i {
 }
 
 /* Section 5 */
-#section_5 {
-  display: flex;
-  width: 100%;
-}
 .health_sheet {
   display: flex;
   flex-flow: column nowrap;
@@ -364,8 +354,7 @@ i {
 
 /* Section 6 */
 #section_6 {
-  display: flex;
-  flex-flow: column nowrap;
+  flex-wrap: nowrap;
   justify-content: space-evenly;
   height: 80vh;
   background-image: url(../imgs/make-an-appointment.jpg);
@@ -451,10 +440,8 @@ form input::placeholder,
 /* Footer */
 .foot_head {
   padding: 50px 40px;
-  display: flex;
 }
 .left_foot {
-  display: flex;
   width: 65%;
   height: 100%;
 }
@@ -505,6 +492,7 @@ form input::placeholder,
 .foot_head ul li span {
   position: relative;
   display: inline-block;
+  width: 10px;
   margin-right: 10px;
 }
 .right_foot ul li span {
@@ -541,17 +529,23 @@ form input::placeholder,
   background: #f1efef;
   padding : 20px 40px
 }
-.foot_bottom ul {
-  display: flex;
-}
 .foot_bottom ul li {
   color: grey;
   font-size: 11px;
   margin-right: 10px;
 }
-.foot_bottom ul li span {
+.foot_bottom ul li:not(#last)::after {
+  display: inline;
+  content: ' |';
+  margin-left: 4px;
+}
+.foot_bottom ul li:last-child:after {
+  display: inline;
+  content: ' Word Press';
   color: black;
 }
+
+/* FIXED MENU */
 #fixed_menu {
   border-radius: 2px;
   width: 35px;
