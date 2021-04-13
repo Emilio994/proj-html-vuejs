@@ -533,14 +533,13 @@ form input::placeholder,
 .right_foot button {
   font-weight: 400;
   border: 1px solid black;
-  background: transparent;
   color: black;
   padding: 10px 25px;
 }
 
 .foot_bottom {
   background: #f1efef;
-  padding : 20px 50px
+  padding : 20px 40px
 }
 .foot_bottom ul {
   display: flex;

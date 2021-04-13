@@ -26,7 +26,7 @@
             </div>
             <div class="head_nav flex_row">
               <ul class='flex_row'>
-                <li v-for='(element, index) in nav_list.head'><a>{{ element.toUpperCase() }}</a></li>
+                <li v-for='(element, index) in nav_lists.head'><a>{{ element.toUpperCase() }}</a></li>
               </ul>
               <button :style='button_styles.marine'>{{ button_tags.appointment }}</button>
             </div>
@@ -345,21 +345,12 @@
         <div class="foot_head">
           <div class="left_foot">
             <div id="avada_health">
-              <img src="imgs/medical_logo_1x_dark.png" alt="">
+              <img :src="myImagesPath + images.footer" alt="">
               <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusatiium dolemue<br> lauti totam aperiam, eaque ipsa quae abillo. Invente veritatis et quasi architecto beatae<br> luptatem accusatium, remaperiamsiat. Voluptatem accusest etsium doloremque<br> laudaien. Lorem ipsum sits dolores ets unser</p>
               <h5>LEARN MORE ABOUT US</h5>
               <div class="doc_socials">
-                <div class="social_square fb">
-                  <i class="fab fa-facebook-f"></i>
-                </div>
-                <div class="social_square tw">
-                  <i class="fab fa-twitter"></i>
-                </div>
-                <div class="social_square in">
-                  <i class="fab fa-instagram"></i>
-                </div>
-                <div class="social_square yt">
-                  <i class="fab fa-youtube"></i>
+                <div v-for='(key, index) in socials.classes' class="social_square" :class='key'>
+                  <span><i :class='socials.icons[index]'></i></span>
                 </div>
               </div>
 
@@ -368,8 +359,7 @@
             <div id="contact_infos">
               <h4>CONTACT INFORMATION</h4>
               <ul>
-                <li><span><i class="fas fa-map-marker-alt"></i></span>121 King Street, London United Kingdom</li>
-                <li><span><i class="fas fa-phone"></i></span>1.800.458.556</li>
+                <li v-for='(item, index) in nav_lists.footer.infos'><span><i :class='font_awsome[index]'></i></span> {{ item }}</li>
               </ul>
             </div>
 
@@ -378,23 +368,16 @@
           <div class="right_foot">
             <h4>MEDICAL DEPARTMENTS</h4>
             <ul>
-              <li><span><i class="fas fa-angle-right"></i></span><a href="">Cardiology</a></li>
-              <li><span><i class="fas fa-angle-right"></i></span><a href="">Pediatrics</a></li>
-              <li><span><i class="fas fa-angle-right"></i></span><a href="">Diabetes Care</a></li>
-              <li><span><i class="fas fa-angle-right"></i></span><a href="">Pre-natel Care</a></li>
-              <li><span><i class="fas fa-angle-right"></i></span><a href="">Ultrasound Echocardiogram</a></li>  
+              <li v-for='(item, index) in nav_lists.footer.departments'><span><i :class='font_awsome[2]'></i></span> {{ item }}</li>
             </ul>
-            <button>VIEW OUR DEPARTMENTS</button>
+            <button :style='button_styles.empty'>{{ button_tags.departments }}</button>
 
           </div>
         </div>
 
         <div class="foot_bottom">
           <ul>
-            <li>© Copyright 2012-2020 |</li>
-            <li>Avada theme by <span>Theme Fusion</span> |</li>
-            <li>All Rights Reserved</li>
-            <li>Powered by <span>WordPress</span></li>
+            <li v-for='(item, index) in nav_lists.footer.rights'> {{ item }} </li>
           </ul>
         </div>
 
